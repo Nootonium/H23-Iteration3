@@ -15,7 +15,7 @@ Afin de pouvoir tester l'application avant de l'offrir aux clients, on désire u
 
 1. Votre application devra déployer de façon automatique vers l'environnement staging à partir de la branche commune de votre répertoire Git, par exemple `dev` ou `main`, selon votre stratégie de branchage.
 2. On devrait également pouvoir (re)déployer manuellement n'importe quel **commit**, **branche** ou **tag** à *tout* moment. Vous devrez donc ajouter un *manual trigger* prenant en *input* le commit, la branche ou le tag à déployer (voir l'action officielle [`checkout`](https://github.com/actions/checkout)). **Attention** : l'option `Use workflow from` du UI ne correspond **pas** à ce critère et change seulement la version du *fichier de pipeline* et **non** du *code à déployer*!.
-3. Finalement, l'étape de déploiement devra seulement s'effectuer si vous tests passent. Vous pouvez utiliser la stratégie que vous voulez pour séparer les étapes de déploiement de celles d'intégration (plusieurs workflow, 1 seul avec plusieurs jobs, 1 seule job, etc.).
+3. Finalement, l'étape de déploiement devra seulement s'effectuer si vos tests passent. Vous pouvez utiliser la stratégie que vous voulez pour séparer les étapes de déploiement de celles d'intégration (plusieurs workflow, 1 seul avec plusieurs jobs, 1 seule job, etc.).
 
 La configuration de base auto-générée par fly.io devrait être suffisante.
 
